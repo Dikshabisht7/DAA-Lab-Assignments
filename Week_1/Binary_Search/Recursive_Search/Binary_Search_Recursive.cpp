@@ -4,15 +4,15 @@ using namespace std;
 void binarySearch(int arr[],int l,int r,int key,int c){
     int mid;
     if (r>=l) {
-    mid=l+(r-l)/2;
-    c++;
-    if (arr[mid]==key){
-        cout<<"Present "<<c<<endl;
-        return;
-    }
-    if (arr[mid]>key)
-        return binarySearch(arr,l,mid-1,key,c);
-    return binarySearch(arr,mid+1,r,key,c);
+        mid=l+(r-l)/2;
+        c++;
+        if (arr[mid]==key){
+            cout<<"Present "<<c<<endl;
+            return;
+        }
+        if (arr[mid]>key)
+            return binarySearch(arr,l,mid-1,key,c);
+        return binarySearch(arr,mid+1,r,key,c);
     }
     cout<<"Not Present "<<c<<endl;
 }
