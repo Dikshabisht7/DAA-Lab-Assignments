@@ -32,8 +32,8 @@ int main(){
     int n,key,i,t;
     cin>>t; //Total number of test cases
     while(t--){
-        cin>>n;
-        int arr[n]; //Size of array
+        cin>>n; //Size of array
+        int arr[n];
         //Elements of array
         for(i=0;i<n;i++){
             cin>>arr[i];
