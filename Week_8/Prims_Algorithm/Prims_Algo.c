@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <limits.h>
+
 int minKey(int V,int key[], bool mstSet[])
 {
 	int min = INT_MAX, min_index;

@@ -11,10 +11,12 @@ struct node
         wt=weight;
     }
 };
+
 bool cmp(node a,node b)
 {
     return (a.wt<b.wt);
 }
+
 int findpar(int u,vector<int>&parent)
 {
     if(u==parent[u])
@@ -23,6 +25,7 @@ int findpar(int u,vector<int>&parent)
     }
     return findpar(parent[u],parent);
 }
+
 void unionoperation(int u,int v,vector<int>&parent,vector<int>&rank)
 {
     u=findpar(u,parent);
@@ -41,34 +44,27 @@ void unionoperation(int u,int v,vector<int>&parent,vector<int>&rank)
         rank[u]++;
     }
 }
+
 int main()
 {
     int vertex,ed;
     cin>>vertex>>ed;
-
     vector <node> edges;
-
     for(int i=0;i<ed;i++)
     {
         int u,v,wt;
         cin>>u>>v>>wt;
         edges.push_back(node(u,v,wt));
     }
-    
     sort(edges.begin(),edges.end(),cmp);
-    
     vector <int> parent(vertex);
-    
     for(int i=0;i<vertex;i++)
     {
         parent[i]=i;
     }
-
     vector <int> rank(vertex,0);
     int cost=0;
-
     vector <pair <int,int>> mst;
-
     for(auto i:edges)
     {
         if(findpar(i.u,parent)!=findpar(i.v,parent))
@@ -79,6 +75,5 @@ int main()
         }
     }
     cout<<"Minimum Spanning Weight: "<<cost<<endl;
-
     return 0;
 }
