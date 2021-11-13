@@ -1,0 +1,1 @@
+Minimum number of multiplications is 4500

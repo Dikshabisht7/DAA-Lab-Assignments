@@ -1,0 +1,2 @@
+Following is maximum profit sequence of tasks 
+5 1 2 6 4 3 
