@@ -4,7 +4,6 @@ using namespace std;
 void printMaxActivities(int s[], int f[], int n)
 {
 	int i, j, c;
-
 	cout <<"List of selected activities:  "<< endl;
 	i = 1,c=1;
 	cout <<" "<< i;
