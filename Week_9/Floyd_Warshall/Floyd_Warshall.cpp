@@ -2,7 +2,21 @@
 using namespace std;
 #define V 5
 #define INF 99999
-void printSolution(int dist[][V]);
+
+void printSolution(int dist[][V])
+{
+	cout << "Shortest Distance Matrix: \n";
+	for (int i = 0; i < V; i++) {
+		for (int j = 0; j < V; j++) {
+			if (dist[i][j] == INF)
+				cout << "INF"<< "	 ";
+			else
+				cout << dist[i][j] << "	 ";
+		}
+		cout << endl;
+	}
+}
+
 void floydWarshall(int graph[][V]) {
 	int dist[V][V], i, j, k;
 	for (i = 0; i < V; i++)
@@ -19,20 +33,6 @@ void floydWarshall(int graph[][V]) {
 		}
 	}
 	printSolution(dist);
-}
-
-void printSolution(int dist[][V])
-{
-	cout << "Shortest Distance Matrix: \n";
-	for (int i = 0; i < V; i++) {
-		for (int j = 0; j < V; j++) {
-			if (dist[i][j] == INF)
-				cout << "INF"<< "	 ";
-			else
-				cout << dist[i][j] << "	 ";
-		}
-		cout << endl;
-	}
 }
 
 int main()

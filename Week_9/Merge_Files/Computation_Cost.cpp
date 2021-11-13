@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int minComputation(int size, int files[])
 {
 	priority_queue<int, vector<int>, greater<int> > pq;
